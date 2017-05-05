@@ -1,0 +1,131 @@
+[
+  {
+    "_class":"house.verve.model.Space",
+"name":"home",
+"location" : {"x":4.074426,"y": -73.983749},
+"plan" : 
+{ "type": "Polygon",
+"coordinates":[ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ] ]}
+},
+  {
+    "_class":"house.verve.model.User",
+    "id":"7428",
+"username":"WilmaFlinstone", 
+"firstName":"Wilma",
+"lastName": "Flintstone",
+"email": "wilma.flintstone@gmall.com"
+ },
+    {
+    "_class":"house.verve.model.SpaceRole",
+    "id":"7427",
+   "user_id":"7428",
+"space_id":"16625",
+"role":"owner"
+  },
+    {
+    "_class":"house.verve.model.Device",
+"UUID":"3783490813784",
+"SSID_key":"AIR_QUALITY_&$83",
+"hostname":"verve.house.device",
+"ip_address":"",
+"WIFI_access_point":"",
+"WIFI_ap_password":"", 
+    "_id":ObjectId("7427b"),
+    "sensors" : [ ObjectId("54ad6c"),
+                                ObjectId("54ad6d") ] 
+  },
+    {
+    "_class":"house.verve.model.Sensor",
+ 	"_id" : ObjectId("54ad6c"), 	    
+"n":"CO2",
+"v":"558",
+"u":"ppm",
+"t":ISODate("2015-01-07T17:26:18.995Z"), 
+"deviceId":ObjectId("7427b") 
+},
+    {
+    "_class":"house.verve.model.Sensor",
+    	"_id" : ObjectId("54ad6d"), 
+ "n":"VOC",
+"v":"888",
+"u":"ppm",
+"t":"12:31.21 2016.7.22", 
+"deviceId":ObjectId("7427b")  
+},
+    {
+    "_class":"house.verve.model.Sensor",
+
+    	"_id" : ObjectId("54ad6e"), 
+ 
+"n":"temperature",
+"v":"14",
+"u":"C",
+""t":ISODate("2015-01-07T17:26:18.995Z"), 
+"deviceId":ObjectId("7427b") 
+
+},
+    {
+    "_class":"house.verve.model.Sensor",
+    	"_id" : ObjectId("54ad6f"),
+ "n":"barometer",
+"v":"1100",
+"u":"hPa",
+"t":ISODate("2015-01-07T17:26:18.995Z"), 
+"deviceId":ObjectId("7427b") 
+},
+    {
+    "_class":"house.verve.model.Sensor",
+    	"_id" : ObjectId("54ad6g"), 
+ "n":"humidity",
+"v":"50.0",
+"u":"RH",
+"t":ISODate("2015-01-07T17:26:18.995Z"), 
+"deviceId":ObjectId("7427b") 
+},
+    {
+    "_class":"house.verve.model.Sensor",
+"_id" : ObjectId("54ad6h"),  
+"n":"dust",
+"v":"0.28",
+"u":"mgm3",
+"t":ISODate("2015-01-07T17:26:18.995Z"), 
+"deviceId":ObjectId("7427b") 
+},
+    {
+    "_class":"house.verve.model.Sensor",
+"_id" : ObjectId("54ad6i"), 
+"n":"radon",
+"v":"0.0",
+"a":"2",
+"u":"der",
+"t":ISODate("2015-01-07T17:26:18.995Z"), 
+"deviceId":ObjectId("7427b") 
+},   
+{
+ "_class":"house.verve.model.Sensor",
+"_id" : ObjectId("54ad6j"), 
+"n":"EMF",
+"v":"0",
+"u":"emf",
+"t":ISODate("2015-01-07T17:26:18.995Z"), 
+"deviceId":ObjectId("7427b")  
+},
+{
+"_class":"house.verve.model.Message",
+"id":ObjectId("16628"),
+"message":"temperature exceeded max level",
+"topic":"house_33.kitchen_01.temperature",
+"topicId":ObjectId("16432"),
+"level":"warning"},
+{
+"_class":"house.verve.model.Topic",
+"id":ObjectId("16432"),
+"topic":"house_33.kitchen_01.temperature",
+"active":"1"},
+{
+"_class":"house.verve.model.TopicSubscription",
+"id":ObjectId("1643233"),
+"topic":ObjectId("16432"),
+"user":ObjectId("7428"),
+"active":"1"}
+]

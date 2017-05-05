@@ -1,0 +1,162 @@
+[ {
+    "_class":"house.verve.model.Space",
+       "id":"57d1da0660ca06203b3e9246", 
+"name":"home"
+},
+  { "_class":"house.verve.model.User",
+"id":"57d1da0660ca06203b3e9245",
+"username":"wilma", 
+"firstName":"Wilma",
+"lastName": "Flintstone",
+"email": "wilma.flintstone@gmall.com",
+"password":"password"
+},
+{
+"_class":"house.verve.model.User",
+"id":"57d1da0660ca06203b3e9245",
+"username":"test@test.com", 
+"firstName":"Pedro",
+"lastName": "Picapiedra",
+"email": "test@test.com",
+"password":"1234"
+ },
+    {
+    "_class":"house.verve.model.SpaceRole",
+    "id":"7427",
+   "user": "57d1da0660ca06203b3e9245" ,
+"space": "57d1da0660ca06203b3e9246" ,
+"role":"owner"
+  },
+      {
+    "_class":"house.verve.model.Device",
+    "id": "57d1da0660ca06203b3e9247",
+"UUID":"3783490813784",
+"SSID_key":"AIR_QUALITY_&$83",
+"hostname":"verve.house.device",
+"ip_address":"",
+"WIFI_access_point":"",
+"WIFI_ap_password":"",
+"services":["humidity","dust","radon","VOC","pressure"]},
+      {
+    "_class":"house.verve.model.Device",
+    "id": "57d1da0660ca06203b3e9242",
+"UUID":"3783490813784",
+"SSID_key":"AIR_QUALITY_83",
+"hostname":"aq1.rutabagonza",
+"services":["humidity","dust","radon","VOC","pressure"]},
+{
+    "_class":"house.verve.model.Device",
+    "id": "57d1da0660ca06203b3e9232",
+"UUID":"3783490813784",
+"SSID_key":"CERV_VENTILATION",
+"hostname":"CERV.01",
+"services":["ventilate"]},
+    {
+    "_class":"house.verve.model.Device",
+    "id": "57d1da0660ca06203b3e9231",
+"UUID":"3783490813784",
+"SSID_key":"ControlCenter",
+"hostname":"cc.rutabazna",
+"services":["email","inbox"]},
+     {
+    "_class":"house.verve.model.Sensor",
+ 	"id" :  "57d1da0660ca06203b3e9248" , 	    
+"n":"CO2",
+"type":"CO2",
+"v":"558",
+"u":"ppm",
+"device": "57d1da0660ca06203b3e9242",
+"t":"2015-01-07T17:26:18.995Z" 
+},
+    {
+    "_class":"house.verve.model.Sensor",
+    	"id" :  "57d1da0660ca06203b3e9249" , 
+ "n":"VOC",
+ "type":"VOC",
+ "v":"888",
+"u":"ppm",
+"device": "57d1da0660ca06203b3e9247",
+"t":"12:31.21 2016.7.22"  
+},
+    {
+    "_class":"house.verve.model.Sensor",
+    	"id" :  "57d1da0660ca06203b3e924a" , 
+"n":"temperature", 
+"type":"temperature",
+"v":"14",
+"u":"C",
+"device": "57d1da0660ca06203b3e9247",
+"t":"2015-01-07T17:26:18.995Z"  
+
+},
+    {
+    "_class":"house.verve.model.Sensor",
+    	"id" :  "57d1da0660ca06203b3e924b" ,
+ "n":"barometer",
+ "type":"barometer",
+"v":"1100",
+"u":"hPa",
+"device": "57d1da0660ca06203b3e9247",
+"t":"2015-01-07T17:26:18.995Z"  
+},
+    {
+    "_class":"house.verve.model.Sensor",
+    	"id" :  "57d1da0660ca06203b3e924c" , 
+ "n":"humidity",
+ "type":"humidity",
+"v":"50.0",
+"u":"RH",
+"device": "57d1da0660ca06203b3e9247",
+"t":"2015-01-07T17:26:18.995Z"  
+},
+    {
+    "_class":"house.verve.model.Sensor",
+"id" :  "57d1da0660ca06203b3e924d" ,  
+"n":"dust",
+"type":"dust",
+"v":"0.28",
+"u":"mgm3",
+"device": "57d1da0660ca06203b3e9247",
+"t":"2015-01-07T17:26:18.995Z"  
+},
+    {
+    "_class":"house.verve.model.Sensor",
+"id" :  "57d1da0660ca06203b3e924e" , 
+"n":"radon",
+"type":"radon",
+"v":"0.0",
+"a":"2",
+"u":"der",
+"device": "57d1da0660ca06203b3e9247",
+"t":"2015-01-07T17:26:18.995Z"  
+},   
+{
+ "_class":"house.verve.model.Sensor",
+"id" : "57d1da0660ca06203b3e924f" , 
+"n":"EMF",
+"type":"EMF",
+"v":"0",
+"u":"emf",
+"device": "57d1da0660ca06203b3e9247",
+"t":"2015-01-07T17:26:18.995Z"  
+},
+{
+"_class":"house.verve.model.Message",
+"id":"16628",
+"message":"temperature exceeded max level",
+"topic":"house_33.kitchen_01.temperature",
+"topicId":"16432",
+"level":"warning"},
+{
+"_class":"house.verve.model.Topic",
+"id":"16432",
+"topic":"house_33.kitchen_01.temperature",
+"active":"1"},
+{
+"_class":"house.verve.model.TopicSubscription",
+"id":"1643233",
+"topic":"16432",
+"user":"7428",
+"active":"1"}
+
+]

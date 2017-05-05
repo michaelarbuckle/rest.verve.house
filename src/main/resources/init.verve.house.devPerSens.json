@@ -1,0 +1,119 @@
+[ {
+    "_class":"house.verve.model.Space",
+       "id":"57d1da0660ca06203b3e9246", 
+"name":"home"
+},
+  {
+    "_class":"house.verve.model.User",
+    "id":"57d1da0660ca06203b3e9245",
+"username":"WilmaFlinstone", 
+"firstName":"Wilma",
+"lastName": "Flintstone",
+"email": "wilma.flintstone@gmall.com"
+ },
+    {
+    "_class":"house.verve.model.SpaceRole",
+    "id":"7427",
+   "user": "57d1da0660ca06203b3e9245" ,
+"space": "57d1da0660ca06203b3e9246" ,
+"role":"owner"
+  },
+      {
+    "_class":"house.verve.model.Device",
+"UUID":"3783490813784",
+"SSID_key":"AIR_QUALITY_&$83",
+"hostname":"verve.house.device",
+"ip_address":"",
+"WIFI_access_point":"",
+"WIFI_ap_password":"", 
+    "_id": "57d1da0660ca06203b3e9247",
+    "sensors" : [
+     {
+    "_class":"house.verve.model.Sensor",
+ 	"_id" :  "57d1da0660ca06203b3e9248" , 	    
+"n":"CO2",
+"v":"558",
+"u":"ppm",
+"t":"2015-01-07T17:26:18.995Z" 
+},
+    {
+    "_class":"house.verve.model.Sensor",
+    	"_id" :  "57d1da0660ca06203b3e9249" , 
+ "n":"VOC",
+"v":"888",
+"u":"ppm",
+"t":"12:31.21 2016.7.22"  
+},
+    {
+    "_class":"house.verve.model.Sensor",
+
+    	"_id" :  "57d1da0660ca06203b3e924a" , 
+ 
+"n":"temperature",
+"v":"14",
+"u":"C",
+"t":"2015-01-07T17:26:18.995Z"  
+
+},
+    {
+    "_class":"house.verve.model.Sensor",
+    	"_id" :  "57d1da0660ca06203b3e924b" ,
+ "n":"barometer",
+"v":"1100",
+"u":"hPa",
+"t":"2015-01-07T17:26:18.995Z"  
+},
+    {
+    "_class":"house.verve.model.Sensor",
+    	"_id" :  "57d1da0660ca06203b3e924c" , 
+ "n":"humidity",
+"v":"50.0",
+"u":"RH",
+"t":"2015-01-07T17:26:18.995Z"  
+},
+    {
+    "_class":"house.verve.model.Sensor",
+"_id" :  "57d1da0660ca06203b3e924d" ,  
+"n":"dust",
+"v":"0.28",
+"u":"mgm3",
+"t":"2015-01-07T17:26:18.995Z"  
+},
+    {
+    "_class":"house.verve.model.Sensor",
+"_id" :  "57d1da0660ca06203b3e924e" , 
+"n":"radon",
+"v":"0.0",
+"a":"2",
+"u":"der",
+"t":"2015-01-07T17:26:18.995Z"  
+},   
+{
+ "_class":"house.verve.model.Sensor",
+"_id" : "57d1da0660ca06203b3e924f" , 
+"n":"EMF",
+"v":"0",
+"u":"emf",
+"t":"2015-01-07T17:26:18.995Z"  
+}] 
+  },
+{
+"_class":"house.verve.model.Message",
+"id":"16628",
+"message":"temperature exceeded max level",
+"topic":"house_33.kitchen_01.temperature",
+"topicId":"16432",
+"level":"warning"},
+{
+"_class":"house.verve.model.Topic",
+"id":"16432",
+"topic":"house_33.kitchen_01.temperature",
+"active":"1"},
+{
+"_class":"house.verve.model.TopicSubscription",
+"id":"1643233",
+"topic":"16432",
+"user":"7428",
+"active":"1"}
+]
+]

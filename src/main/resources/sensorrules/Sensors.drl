@@ -1,0 +1,198 @@
+package house.verve.model   
+import house.verve.model.Action;
+import house.verve.model.ActionList;
+import house.verve.model.ActionParameter;
+import house.verve.model.Message;
+import house.verve.model.MessageList;
+import house.verve.model.Sensor;
+import house.verve.model.Space;
+import house.verve.model.Timeseries;
+import house.verve.model.User;
+
+
+   
+rule "Air quality deterioration"
+
+      when                                     
+
+       ( Sensor( type == "CO2" && val > 700  ) or
+
+          Sensor( type == "VOC" && val > 700  ) )          
+
+ 	  al : ActionList()
+
+ 	  ml : MessageList()	
+
+    then
+
+ 	 Action a = new Action();
+
+    	 insert(a);
+
+  	     a.setName("increase ventilation in the house ");
+
+         a.setService("increase ventilation");
+
+         a.setTopic("air quality issue");
+
+         ActionParameter ap1 = new ActionParameter();
+
+         insert(ap1);
+
+         ap1.setType("increase");
+
+         ap1.setValue("10%");
+
+         a.addActionParameter(ap1);			         
+
+  		 al.add(a);
+
+  		 Message m = new Message();
+
+  	     insert(m);
+
+    	 m.setMessage( "CO2 or VOCs levles in exceess of 700 ppm detected. Deterioration in air quality"  );
+
+         m.setTopic( " air quality issue" );
+
+         ml.add(m);
+
+end
+
+rule "Radon health hazard"
+
+      when    
+
+      Sensor( type == "radon" && val > 1) 
+      
+	  al : ActionList()
+
+ 	  ml : MessageList()	
+
+    then
+ 	     Action a = new Action();
+
+    	 insert(a);
+
+  	     a.setName("increase ventilation in the house ");
+
+         a.setService("increase ventilation");
+
+         a.setTopic("air quality issue");
+
+         ActionParameter ap1 = new ActionParameter();
+
+         insert(ap1);
+
+         ap1.setType("increase");
+
+         ap1.setValue("10%");
+
+         a.addActionParameter(ap1);			         
+
+  		 al.add(a);
+
+  		 Message m = new Message();
+
+  	     insert(m);
+
+    	 m.setMessage( "CO2 or VOCs levles in exceess of 700 ppm detected. Deterioration in air quality"  );
+
+         m.setTopic( " air quality issue" );
+
+         ml.add(m);
+
+end
+
+rule "mold risk high"
+
+	when 
+	
+		t1 : Timeseries(type == "humidity" && avg > 50 )
+		ml : MessageList()	 
+
+    then
+
+   	  Message m = new Message();
+
+  	  insert(m);
+
+    	 m.setMessage( "Humidity persistently above 50% for over a month. Suggest add a dehumidifier or airconditioning.");
+
+         m.setTopic( "air quality issue" );
+
+         ml.add(m); 
+        
+end
+
+
+rule "kitchen boiling"
+
+    when                                     
+
+        s1 : Sensor( type == "humidity" && val > 90 ) 
+
+        sp : Space( name matches "^.*[Kk][Ii][Tt][Cc][Hh][Ee][Nn].*$") 
+
+        al : ActionList()
+
+ 	    ml : MessageList()	 
+
+    then
+
+   	  Message m = new Message();
+
+  	  insert(m);
+
+    	 m.setMessage( "humidity reached "+s1.getV()+" in the "+sp.getName()+". request increase in ventilation");
+
+         m.setTopic( "kitchen air quality issue" );
+
+         ml.add(m);
+
+         Action a = new Action();
+
+    	 insert(a);
+
+  	 a.setName("increase ventilation in the "+sp.getName());
+
+         a.setService("increase ventilation");
+
+         a.setTopic("kitchen air quality issue");
+
+         ActionParameter ap1 = new ActionParameter();
+
+         insert(ap1);
+
+         ap1.setType("increase");
+
+         ap1.setValue("10%");
+
+         a.addActionParameter(ap1);			         
+
+  		 al.add(a);
+
+         
+
+end
+
+ rule "ventilation changed to improve air quality"
+    when                                     
+
+        a1 : Action( type == "ventilation increase" && status == "complete"  && topic == "air quality issue") 
+
+ 	 ml : MessageList()	 
+
+    then
+
+	 Message m = new Message();
+
+  	     insert(m);
+
+    	 m.setMessage( "Goodbye CO2  and VOCs  and radon "  );
+
+         m.setTopic( "air quality issue" );
+
+         ml.add(m);
+
+end

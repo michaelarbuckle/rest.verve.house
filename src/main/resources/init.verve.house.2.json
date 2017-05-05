@@ -1,0 +1,42 @@
+[
+  {
+    "_class":"house.verve.model.Space",
+    "id":"16625",
+"name":"home",
+   "location" : { "latitude":4.074426, "longitude":-73.983749},
+"parentSpace":"earth"
+},
+ {
+    "_class":"house.verve.model.Space",
+    "id":"16628",
+“name":"living room",
+"location" : { "latitude":4.074426, "longitude":-73.983749},
+“parentSpace":"16625"
+  },
+  {
+    "_class":"house.verve.model.User",
+    "id":"7427",
+"username":"FredFlinstone", 
+“firstName":"Fred",
+“lastName": "Flintstone",
+“email": "fred.flintstone@gmall.com"
+ },
+    {
+    "_class":"house.verve.model.SpaceRole",
+    "id":"7427",
+   “user_id":"7427",
+“space_id":"16625",
+“role":"owner"
+  },
+    {
+    "_class":"house.verve.model.Device",
+“UUID":"3783490813784",
+“SSID_key":"AIR_QUALITY_&$83",
+“hostname":"verve.house.device",
+“ip_address":"",
+“WIFI_access_point":"",
+WIFI_ap_password:"", 
+    "id":"7427" 
+  }
+
+]

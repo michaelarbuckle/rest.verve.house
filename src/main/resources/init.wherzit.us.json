@@ -1,0 +1,57 @@
+[
+  {
+    "_class":"us.wherzit.model.Space",
+    "id":"16625",
+"name":"home",
+"location" : { "latitude":4.074426, "longitude":-73.983749},
+"parentSpace":"earth"
+},
+  {
+    "_class":"us.wherzit.model.Space",
+    "id":"16628",
+"name":"living room",
+"location" : { "latitude":4.074426, "longitude":-73.983749},
+"parentSpace":"16625"
+  },
+  {
+    "_class":"us.wherzit.model.User",
+    "id":"7428",
+"username":"WilmaFlinstone", 
+"firstName":"Wilma",
+"lastName": "Flintstone",
+"email": "wilma.flintstone@gmall.com"
+ },
+    {
+    "_class":"us.wherzit.model.SpaceRole",
+    "id":"7427",
+   "user_id":"7428",
+"space_id":"16625",
+"role":"owner"
+  },
+  {
+    "_class":"us.wherzit.model.Storage",
+    "id":"16628",
+"name":"living room",
+"location" : { "latitude":4.074426, "longitude":-73.983749},
+"type" : "drawer"
+},
+  {
+    "_class":"us.wherzit.model.Landmark",
+    "id":"16628",
+"name":"living room",
+"location" : { "latitude":4.074426, "longitude":-73.983749},
+"type" : "drawer"
+},
+  {
+    "_class":"us.wherzit.model.Thinge",
+    "id":"16628",
+"name":"spoon",
+"annotation":"",
+"landmark":"",
+"category":"",
+"imageUrl":"",
+"thumbnailUrl":""
+}
+
+
+]

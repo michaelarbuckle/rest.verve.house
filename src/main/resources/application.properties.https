@@ -1,0 +1,10 @@
+spring.data.mongodb.uri=mongodb://localhost:27017/test
+security.basic.enabled=true
+false=false
+token.secret=123456
+
+server.port: 8443
+server.ssl.key-store: keystore.p12
+server.ssl.key-store-password: mypassword
+server.ssl.keyStoreType: PKCS12
+server.ssl.keyAlias: tomcat
